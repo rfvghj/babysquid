@@ -1,0 +1,561 @@
+<!doctype html>
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="">
+<title>SQUID BABY Token</title>
+<!-- <link rel="canonical" href="https://squid.pet/"> -->
+<meta property="og:image" content="images/Glogo.gif">
+<link rel="icon" type="image/png" href="img/200.png">
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/lightgallery.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link class="skin" rel="stylesheet" href="css/skin-1.css">
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+
+<style>
+    .about-wraper-1 .dz-media.left {
+    float: right;
+    margin: 43px -21px 60px 0;
+}
+.about-wraper-1 .dz-media img {
+    width: 90%;
+}
+.about-wraper-1 .dz-media.left:after {
+    right: 15px;
+    transform: rotate(8deg);
+    border-radius: 0 100px 100px 0;
+}
+.pricingtable-wrapper.style-2 .pricingtable-features li:after {
+    content: "\f054";
+    font-family: fontawesome;
+    font-size: 12px;
+    width: 26px;
+    height: 26px;
+    background: var(--rgba-primary-1);
+    display: block;
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    border-radius: 35px;
+    text-align: center;
+    top: 6px;
+    line-height: 26px;
+    -webkit-transition: all 1s;
+    -ms-transition: all 1s;
+    transition: all 1s;
+}
+.dlab-subscribe.style-1 {
+    padding: 50px 60px;
+    background-color: #fff;
+    z-index: 99;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);
+    background-image: url();
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.icon-bx-wraper.style-7 {
+    border-radius: .5rem;
+    background: #f5f5f5;
+    box-shadow: 0 0 60px 0 rgb(0 0 0 / 10%);
+    padding: 30px;
+    -webkit-transition: all 1s;
+    -ms-transition: all 1s;
+    transition: all 1s;
+}
+
+
+// best in chrome
+$total: 300; // total particles
+$orb-size: 100px;
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: black;
+}
+
+.wrap {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 0; 
+  height: 0; 
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: rotate 14s infinite linear;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-image: linear-gradient(to right,#f55f8d 0,#f8ae56 100%); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Some padding */
+  border-radius: 12px; /* Rounded corners */
+  font-size: 10px; /* Increase font size */
+}
+
+#myBtn:hover {
+ background-image: linear-gradient(to left,#f55f8d 0,#f8ae56 100%) /* Add a dark-grey background on hover */
+}
+
+
+@keyframes rotate {
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+.c {
+  position: absolute;
+  width: 2px;
+  height:2px;
+  border-radius: 50%;
+  opacity: 0; 
+}
+
+@for $i from 1 through $total {
+  $z: (random(360) * 1deg); // random angle to rotateZ
+  $y: (random(360) * 1deg); // random to rotateX
+  $hue: ((40/$total * $i) + 0); // set hue
+  
+  .c:nth-child(#{$i}){ // grab the nth particle
+    animation: orbit#{$i} 14s infinite;
+    animation-delay: ($i * .01s); 
+    background-color: hsla($hue, 100%, 50%, 1);
+  }
+
+  @keyframes orbit#{$i}{ 
+    20% {
+      opacity: 1; // fade in
+    }
+    30% {
+      transform: rotateZ(-$z) rotateY($y) translateX(100px) rotateZ($z); // form orb
+    }
+    80% {
+      transform: rotateZ(-$z) rotateY($y) translateX(100px) rotateZ($z); // hold orb state 30-80
+      opacity: 1; // hold opacity 20-80
+    }
+    100% {
+       transform: rotateZ(-$z) rotateY($y) translateX( (100px * 3) ) rotateZ($z); // translateX * 3
+    }
+  }
+}
+</style>
+</head>
+<body id="bg">
+
+
+
+<div class="page-wraper">
+
+<header class="site-header header mo-left header-transparent text-black" style="height: 130.25px;">
+
+<div class="sticky-header main-bar-wraper navbar-expand-lg">
+<div class="main-bar clearfix ">
+<div class="container clearfix">
+
+<div class="logo-header  logo-dark">
+
+</div>
+
+
+
+<div class="extra-nav">
+<div class="extra-cell">
+<a href="https://pancakeswap.finance/swap?outputCurrency=0x" hreflang="en-us" target="_blank" class="btn btn-primary gradient rounded-xl">Buy $SQUIDBABY</a>
+</div>
+</div>
+<div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
+
+
+<ul class="nav navbar-nav navbar" style="color:#fff;">
+<li><a href="#tokenomics" hreflang="en-us" style="color:#fff;"><span>Tokenomics</span></a></li>
+<li><a href="#aboutus" hreflang="en-us" style="color:#fff;"><span>About Us</span></a> </li>
+<li><a href="https://bscscan.com/token/0x" target="_blank" hreflang="en-us" style="color:#fff;"><span>Contract</span></a></li>
+<!-- <li><a href="#features" hreflang="en-us"style="color:#fff;"><span>Development</span></a></li> -->
+<li><a href="#roadmap" hreflang="en-us" style="color:#fff;">Roadmap</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+</header>
+
+<div class="page-content bg-white">
+<!---->
+<div class="banner-two" style="background-color:#111;">
+<div class="container">
+<div class="banner-inner">
+<div class="row align-items-center">
+<div class="col-lg-7">
+<div class="banner-content">
+<h2 class="wow fadeInUp sub-title text-primary" data-wow-delay="0.5s">The next big meme token</h2>
+<h1 class="wow fadeInUp m-b20" data-wow-delay="1s">SQUID BABY</h1>
+<p class="wow fadeInUp m-b15" data-wow-delay="1.5s" style="color:#dd3e6e">Squid Baby is live on Pancakeswap!<br></p>
+<p class="wow fadeInUp m-b15" data-wow-delay="1.5s">
+  SQUID BABY is a reflection MEME + NFT gaming token with 2% RFI. We have a lot in store in the near future involving NFTs in categories based by rareness.</p>
+<ul class="wow fadeInUp list-check-2 m-b20" data-wow-delay="2.0s">
+
+</ul>
+<p style="color:#dd3e6e;font-weight:bold;font-size:12px;margin-bottom:0;">$Squid Baby CONTRACT</p>
+<a id="tokenAddress" href="https://bscscan.com/token/0x" class="gradient" target="_blank" style="margin-bottom:25px;color: white;border-radius: 30px;padding: 5px;font-size: 12px;width: 320px;cursor:pointer;text-align: center;">Coming soon</a> <!---i class="fas fa-copy"></i---->
+<br><br><br>
+<a href="https://poocoin.app/" hreflang="en-us" target="_blank" class="wow fadeInUp btn btn-primary rounded-xl gradient" data-wow-delay="2.5s">BUY $SquidBaby</a>
+<a href="https://t.me/squid_baby" hreflang="en-us" target="_blank" class="wow fadeInUp btn btn-primary rounded-xl gradient" data-wow-delay="2.5s">Join Telegram</a>
+<a href="./info.html" hreflang="en-us" target="_blank" class="wow fadeInUp btn btn-primary rounded-xl gradient" data-wow-delay="2.5s">White List</a>
+</div>
+</div>
+<div class="col-lg-5">
+<div class="banner-media">
+<img src="img/Glogo.gif" class="wow fadeInUp" data-wow-delay="2s" alt="KAKASHI INU Logo">
+
+
+
+<div class="wrap">
+
+
+</div>
+
+</div>
+
+<div class="move-2">
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+<section id="tokenomics" class="content-inner-2">
+<div class="container">
+<div class="section-head style-1 text-center">
+
+<h2 class="title">TOKENOMICS &amp; NFTs</h2> 
+<p style="font-size:16px;"> </p>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="icon-bx-wraper style-7 text-center m-lg-b30" style="min-height: 450px; background: #333;">
+<div class="icon-media">
+<img src="img/g1.gif" width="220" alt="multiple KAKASHINUs GIF">
+</div>
+<div class="icon-content">
+<h3 class="dlab-title">Redistribution</h3>
+<p><span style="color: #dd3e6e; font-size:large;">2%</span> 
+ of every buy and sell transactions is automatically redistributed in $Squidbaby tokens.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="icon-bx-wraper style-7 text-center m-lg-b30" style="min-height: 450px; background: #333;">
+<div class="icon-media">
+<img src="img/g2.gif" width="220" alt="rare KAKASHINU GIF" style=" /*padding-bottom: 50px; */">
+</div>
+<div class="icon-content">
+<h3 class="dlab-title">Rare NFTs</h3>
+<p><span style="color: #dd3e6e;font-size:large;">5%</span>
+ Of every sale goes to our Development Fund - letting us code games and sign exclusive artists</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12 offset-lg-0 offset-md-3">
+<div class="icon-bx-wraper style-7 text-center " style="min-height: 450px;    background: #333;">
+<div class="icon-media">
+<img src="img/g3.gif" width="220" alt="marketing KAKASHINU GIF">
+</div>
+<div class="icon-content">
+<h3 class="dlab-title">Liquidity </h3>
+<p><span style="color: #dd3e6e;font-size:large;">3%</span>
+transactions is added to liquidity to ensure smooth trading.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section id="aboutus" style="padding-top: 100px;" class="content-inner about-wraper-1">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 m-b30 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
+<div class="dz-media left">
+<img src="img/g4.gif" alt="">
+</div>
+</div>
+<div class="col-lg-6 m-b30 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.4s">
+<div class="section-head style-1">
+<h6 class="sub-title text-primary m-b15">About Us</h6>
+<h3 class="title m-b20" style="padding-left:20px">What is SQUID BABY?</h3>
+<p style="font-size: 17px; padding:20px;">
+SQUID BABY is a token with strong community involvement heading to NFT and Gaming space!
+Bringing Squid Game to life through gaming, NFTs and community. 
+We intend to keep investors included in the decision-making process throughout the life of the token.
+</p>
+</div>
+<ul class="list-check primary m-b30" style="padding-left:20px">
+<li style="font-size: 17px;">Instant rewards for holders</li>
+<li style="font-size: 17px;">Giveaways for our community</li>
+<li style="font-size: 17px;">IN DEVELOPMENT: Games </li>
+<li style="font-size: 17px;">IN DEVELOPMENT: NFTs </li>
+</ul>
+<a href="https://pancakeswap.finance/swap?outputCurrency=0xcb15fc54d0655150fa3784ec4a355b76a951e4cf" hreflang="en-us" target="_blank" class="btn btn-primary rounded-xl gradient">Buy token</a>
+<!-- <a href="./Squid_files/_whitepaper.pdf" hreflang="en-us" target="_blank" class="btn btn-primary rounded-xl gradient">Whitepaper</a> -->
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="Stats" class="content-inner-3 bg-light">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-sm-6 m-b30 col-6">
+<div class="dlab-content-bx style-3 text-center">
+<div class="icon-bx-sm radius">
+<span class="icon-cell">
+
+</span>
+</div>
+<div class="icon-content">
+<h2 class="m-b0 text-primary">100 billion</h2><br>
+<span class="title">Total</span>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-6 m-b30 col-6">
+<div class="dlab-content-bx style-3 text-center">
+<div class="icon-bx-sm radius">
+<span class="icon-cell">
+
+</span>
+</div>
+<div class="icon-content">
+<h2 class="m-b0 text-primary">50 billion</h2><br>
+<span class="title">Black hole</span>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-sm-12 m-b30 col-12">
+<div class="dlab-content-bx style-3 text-center">
+<div class="icon-bx-sm radius">
+<span class="icon-cell">
+
+</span>
+</div>
+
+<div class="icon-content">
+<h2 class="m-b0 text-primary">10%</h2><br>
+<span class="title">Burn</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="roadmap" class="content-inner-2" style="background-image: url(images/background/bg8.png); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<div class="container">
+<div class="section-head style-1 text-center mb-3">
+<h6 class="sub-title m-b15 text-primary">Our Plan</h6>
+<h2 class="title">Roadmap</h2>
+</div>
+<div class="pricingtable-row">
+<div class="row justify-content-center">
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+<div class="pricingtable-wrapper style-2 m-md-b30" style="min-height: 390px;">
+<div class="pricingtable-inner">
+<div class="pricingtable-title">
+<h3 style="color:black">Phase 1 </h3>
+</div>
+
+<ul class="pricingtable-features">
+<li>Launch SQUIDBABY</li>
+<li>Heavy Marketing And Community Engagement</li>
+<li>Onboard Influencers</li>
+<li>Community Giveaways</li>
+<li> Reach 1000 Holder </li>
+
+</ul>
+
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
+<div class="pricingtable-wrapper style-2 m-md-b30 active" style="min-height: 390px;">
+<div class="pricingtable-inner">
+<div class="pricingtable-title">
+<h3 style="color:black">Phase 2 </h3>
+</div>
+
+<ul class="pricingtable-features">
+<li>CoinGecko Listing</li>
+<li>CoinMarketCap Listing</li>
+<li>Launch NFT Marketplace Within Website </li>
+<li>Extreme Marketing Push</li>
+<li>Start Phase 2 Of Marketing Poocoin,Dextools</li>
+<li>Launch Of Wheel Spin Game</li>
+<li>Reach 5000 Holders</li>
+
+</ul>
+
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
+<div class="pricingtable-wrapper style-2" style="min-height: 390px;">
+<div class="pricingtable-inner">
+<div class="pricingtable-title">
+<h3 style="color:black">Phase 3 </h3>
+</div>
+
+<ul class="pricingtable-features">
+<li>Launch Of 2ND Line of NFT's</li>
+<li>Launch Internal Beta Of Battle Game</li>
+<li>Twitch Marketing For Gaming</li>
+<li>Gaming Competition Live On Twitch</li>
+<li>CEX Listing</li>
+
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<br>
+
+
+
+<footer class="site-footer style-2" id="footer" style="padding-top:20px; background-color:#111;">
+<div class="container">
+<div class="dlab-subscribe style-1 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+<div class="row align-items-center">
+<div class="col-lg-6">
+<h2 class="title" style="color:#111">Be part of our growing community on Telegram now!</h2>
+</div>
+<div class="col-lg-6">
+
+<div class="dzSubscribeMsg"></div>
+<div class="form-group" style="text-align: center;">
+<a href="https://t.me/squid_baby" hreflang="en-us" style="padding: 30px 50px; font-size:30px;" target="_blank" class="btn btn-primary gradient rounded-xl">JOIN NOW</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="footer-top">
+<div class="container">
+<div class="row">
+<div class="col-xl-3 col-lg-4 col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
+<div class="widget widget_about">
+<div class="footer-logo">
+<img src="img/200.png" class="wow fadeInUp" data-wow-delay="2s">
+</div>
+<div class="widget widget_getintuch">
+<ul>
+
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-2 col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
+<div class="widget widget_services">
+<h5 class="footer-title">Our links</h5>
+<ul>
+
+<li><a href="#aboutus" hreflang="en-us">About Us</a></li>
+<li><a href="#tokenomics" hreflang="en-us">Tokenomics</a></li>
+<li><a href="#roadmap" hreflang="en-us">Roadmap</a></li>
+
+</ul>
+</div>
+</div>
+<div class="col-xl-3 col-lg-3 col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
+<div class="widget widget_services">
+<h5 class="footer-title">Our Socials</h5>
+<ul>
+<li><a href="https://t.me/squid_baby" hreflang="en-us" target="_blank">Telegram</a></li>
+<li><a href="https://twitter.com/squidbaby_" hreflang="en-us" target="_blank">Twitter</a></li>
+
+</ul>
+</div>
+</div>
+<div class="col-xl-3 col-lg-3 col-sm-6 wow fadeIn" data-wow-duration="2s" data-wow-delay="0.8s">
+<div class="widget widget_services">
+<h5 class="footer-title">Disclaimer</h5>
+<ul>
+<p style="font-size: 12px;">This website is distributed for general informational and educational purposes only and is not intended to constitute legal, tax, accounting or investment advice.</p>
+<p style="font-size: 12px;">All investment strategies and investments involve risk of loss. Nothing contained in this website should be construed as investment advice. Any reference to an investment’s past or potential performance is not, and should not be construed as, a recommendation or as a guarantee of any specific outcome or profit.</p>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-bottom">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 col-md-7 text-left">
+<span class="copyright-text">Copyright © 2021 Squid_Baby. All rights reserved.</span>
+
+</div>
+<div class="col-lg-6 col-md-5 text-right">
+
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Scroll to top</button>
+</div>
+<script>//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}</script>
+</body></html>

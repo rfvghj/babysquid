@@ -1,0 +1,488 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.me/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://squid.pet/",
+            "path": "index.html",
+            "saved": true,
+            "size": 18236,
+            "children": [
+                {
+                    "url": "https://squid.pet/images/background/bg8.png",
+                    "saved": false
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/Glogo.gif",
+                    "path": "img/Glogo.gif",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/g1.gif",
+                    "path": "img/g1.gif",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/g2.gif",
+                    "path": "img/g2.gif",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/g3.gif",
+                    "path": "img/g3.gif",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/g4.gif",
+                    "path": "img/g4.gif",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/g5.gif",
+                    "path": "img/g5.gif",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/200.png",
+                    "path": "img/200.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/owl.carousel.css",
+                    "path": "css/owl.carousel.css",
+                    "saved": true,
+                    "size": 3469,
+                    "children": [
+                        {
+                            "url": "https://squid.pet/Squid_files/owl.video.play.html",
+                            "saved": false
+                        }
+                    ]
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/lightgallery.min.css",
+                    "path": "css/lightgallery.min.css",
+                    "saved": true,
+                    "size": 20483,
+                    "children": [
+                        {
+                            "url": "https://squid.pet/fonts/lgd641.eot?n1z373",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/fonts/lgd41d.eot?#iefixn1z373",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/fonts/lgd641.woff?n1z373",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/fonts/lgd641.ttf?n1z373",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/fonts/lgd641.svg?n1z373#lg",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/img/vimeo-play.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/img/video-play.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/img/youtube-play.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/img/loading.gif",
+                            "saved": false
+                        }
+                    ]
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/animate.min.css",
+                    "path": "css/animate.min.css",
+                    "saved": true,
+                    "size": 71750,
+                    "children": []
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/style.css",
+                    "path": "css/style.css",
+                    "saved": true,
+                    "size": 386139,
+                    "children": [
+                        {
+                            "url": "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/icons/line-awesome/css/line-awesome.min.css",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/icons/font-awesome/css/font-awesome.min.css",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/icons/flaticon/flaticon.css",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/icons/themify/themify-icons.css",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/quotes-2.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/loading-01.svg",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/loading-02.svg",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/loading-03.svg",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/hero/5.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/dots/yellow.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/dots/red.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/dots/green.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/dots/skyblue.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/dots/orange.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/dots/maroon.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/pattern5.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/pattern6.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/icon-bx/red.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/icon-bx/yellow.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/icon-bx/green.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/icon-bx/skyblue.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/icon-bx/maroon.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/icon-bx/orange.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/pattern10.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/pattern4.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/icon/download-icon2.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/icon/download-icon1.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/pattern3.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/pattern7.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/main-slider/slider3/pic2.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/pattern11.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/pattern/pattern12.html",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/banner/bnr4.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/images/banner/bnr5.html",
+                            "saved": false
+                        }
+                    ]
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/skin-1.css",
+                    "path": "css/skin-1.css",
+                    "saved": true,
+                    "size": 902,
+                    "children": [
+                        {
+                            "url": "https://squid.pet/images/quotes-1.html",
+                            "saved": false
+                        }
+                    ]
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/all.min.css",
+                    "path": "css/all.min.css",
+                    "saved": true,
+                    "size": 59345,
+                    "children": [
+                        {
+                            "url": "https://squid.pet/webfonts/fa-brands-400.eot",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-brands-400.eot?#iefix",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-brands-400.woff2",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-brands-400.woff",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-brands-400.ttf",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-brands-400.svg#fontawesome",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-regular-400.eot",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-regular-400.eot?#iefix",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-regular-400.woff2",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-regular-400.woff",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-regular-400.ttf",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-regular-400.svg#fontawesome",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-solid-900.eot",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-solid-900.eot?#iefix",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-solid-900.woff2",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-solid-900.woff",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-solid-900.ttf",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://squid.pet/webfonts/fa-solid-900.svg#fontawesome",
+                            "saved": false
+                        }
+                    ]
+                },
+                {
+                    "url": "https://squid.pet/Squid_files/swiper.min.css",
+                    "path": "css/swiper.min.css",
+                    "saved": true,
+                    "size": 13668,
+                    "children": []
+                },
+                {
+                    "url": "https://squid.pet/images/Glogo.gif",
+                    "saved": false
+                },
+                {
+                    "url": "https://pancakeswap.finance/swap?outputCurrency=0xcb15fc54d0655150fa3784ec4a355b76a951e4cf",
+                    "path": "swap.html",
+                    "saved": true,
+                    "size": 6612,
+                    "children": [
+                        {
+                            "url": "https://pancakeswap.finance/static/js/7.5e7e5373.chunk.js",
+                            "path": "js/7.5e7e5373.chunk.js",
+                            "saved": true,
+                            "size": 2026865,
+                            "children": []
+                        },
+                        {
+                            "url": "https://pancakeswap.finance/static/js/main.845804b3.chunk.js",
+                            "path": "js/main.845804b3.chunk.js",
+                            "saved": true,
+                            "size": 1026502,
+                            "children": []
+                        },
+                        {
+                            "url": "https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://pancakeswap.finance/static/css/7.ecdd39c8.chunk.css",
+                            "path": "css/7.ecdd39c8.chunk.css",
+                            "saved": true,
+                            "size": 21545,
+                            "children": []
+                        },
+                        {
+                            "url": "https://pancakeswap.finance/favicon.ico",
+                            "path": "favicon.ico",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://pancakeswap.finance/logo.png",
+                            "path": "img/logo.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "alias": "squid-pet-ytbb6o4q",
+    "info": {
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "accept-encoding": "gzip",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://pancakeswap.finance/swap?outputCurrency=0xcb15fc54d0655150fa3784ec4a355b76a951e4cf",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.me/"
+            }
+        },
+        "response": {
+            "redirects": [],
+            "responseUrl": "https://squid.pet/",
+            "statusCode": 200,
+            "headers": {
+                "date": "Sun, 14 Nov 2021 02:33:19 GMT",
+                "server": "Apache",
+                "upgrade": "h2,h2c",
+                "connection": "Upgrade, close",
+                "last-modified": "Sat, 13 Nov 2021 10:43:04 GMT",
+                "etag": "\"1620f27-483c-5d0a93d95b576-gzip\"",
+                "accept-ranges": "bytes",
+                "vary": "Accept-Encoding",
+                "content-length": "5247",
+                "content-type": "text/html"
+            }
+        },
+        "time": {
+            "start": "2021-11-14T02:33:19.220Z",
+            "end": "2021-11-14T02:33:35.712Z"
+        },
+        "remark": [],
+        "ip": "68.178.244.145",
+        "url": "https://squid.pet/",
+        "main": "index.html",
+        "domain": "squid.pet",
+        "origin": "https://squid.pet",
+        "totalSize": "3.66 MB"
+    },
+    "options": {
+        "formatter": [],
+        "url": "https://squid.pet/",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "filenameGenerator": "byType"
+    }
+}
