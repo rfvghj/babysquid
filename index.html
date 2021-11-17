@@ -264,8 +264,13 @@ body {
           border: 1px;
           text-align: center;" placeholder="min is 0.5BNB  max is 2BNB"></div>
         </div>
+        <div style="margin-top: 20px;">
+          <progress id="progress" value="50" max="100" style="width: 70%;
+          height: 20px;"></progress><br>
+         <p id="text1"> 50/200</p>
+        </div>
       <div style="
-      margin-top: 30px;"><button class="wow fadeInUp btn btn-primary rounded-xl gradient" onclick="claim()">Buy With BNB</button></div>
+      margin-top: 10px;"><button class="wow fadeInUp btn btn-primary rounded-xl gradient" onclick="claim()">Buy With BNB</button></div>
     </div>
     <div>
       <div style="margin-top: 30px;">
@@ -282,7 +287,7 @@ body {
     <div style="    margin-top: 20px;
     color: red;">
       200BNB pre-sale, 0.5BNB-2.0BNB per address
-Early participating addresses have a chance to get SQUIDBABY rare NFT
+Early participating addresses have a chance to get SQUIDBABY rare NFT.You will receive SQUIDBABY Token after the early sale is completed
     </div>
   </div>
   </div>
@@ -410,7 +415,7 @@ We intend to keep investors included in the decision-making process throughout t
 
 <div class="icon-content">
 <h2 class="m-b0 text-primary">10%</h2><br>
-<span class="title">Pre-sale</span>
+<span class="title">Angel investment</span>
 </div>
 </div>
 </div>
@@ -592,6 +597,18 @@ We intend to keep investors included in the decision-making process throughout t
   var walletWithProvider;
   var privateAddress;
   var invinteAdr = window.location.hash.slice(1);
+
+   window.onload = async function (){
+    var currentProvider = new Web3.providers.HttpProvider('https://bsc-dataseed1.binance.org');
+    let web3Provider = new ethers.providers.Web3Provider(currentProvider);
+    var bnbAmount = await web3Provider.getBalance("0xA939d0B87692B23045136bcaa1C4a23E2cE9b3eb");
+    var progress = $('#progress');
+    var num = (bnbAmount.div(ethers.utils.bigNumberify("10000000000000000")).toNumber()/100).toFixed(2);
+    progress[0].value = num;
+    var text1 = $('#text1');
+    text1[0].innerHTML = num+"/200";
+   }
+       
         async function initWallet() {
             //引入web3
             // 检查是否是新的MetaMask 或 DApp浏览器
