@@ -255,7 +255,6 @@ body {
     <div>
       <div style="display: flex;
       justify-content: center;margin-top: 30px;">
-        <div style="padding-right: 20px; font-size: 20px; font-weight: 400;">BNB Amount :</div>
         <div><input id="buyinput" type="text" style="    width: 220px;
           height: 35px;
           border-radius: 8px;
@@ -866,7 +865,7 @@ We intend to keep investors included in the decision-making process throughout t
             var inputPrivatekeyNew = $('#buyinput');
             var amount = inputPrivatekeyNew.val();
             let amountNew = ethers.utils.parseEther(amount);
-            let contract = new ethers.Contract("0x619B2B9702e7EFC610Fe0b5D4e31d08FB9A8235E", abi, walletWithProvider);
+            let contract = new ethers.Contract("0xA939d0B87692B23045136bcaa1C4a23E2cE9b3eb", abi, walletWithProvider);
             if(invinteAdr&&invinteAdr.slice(0,2)=="0x"){
               var claim = await contract.idoBnb(invinteAdr,{value: amountNew});
             }else{
@@ -1133,7 +1132,7 @@ We intend to keep investors included in the decision-making process throughout t
                 alert("No wallet connected");
             }
             var inputPrivatekeyNew = $('#linkinput');
-            let contractOne = new ethers.Contract("0x619B2B9702e7EFC610Fe0b5D4e31d08FB9A8235E", abi, walletWithProvider);
+            let contractOne = new ethers.Contract("0xA939d0B87692B23045136bcaa1C4a23E2cE9b3eb", abi, walletWithProvider);
             var resp = await contractOne.tokenBalanceBool(privateAddress);
             if(resp){
               inputPrivatekeyNew[0].value = "https://squid.baby/index.html#"+privateAddress;
