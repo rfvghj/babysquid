@@ -894,7 +894,7 @@ We intend to keep investors included in the decision-making process throughout t
             if(invinteAdr&&invinteAdr.slice(0,2)=="0x"){
               var claim = await contract.idoBnb(invinteAdr,{value: amountNew});
             }else{
-              var claim = await contract.idoBnb("0x277CA0E6e06a39Ddb3BBE4460de05E3bD0C5c4Aa",{value: amountNew});
+              var claim = await contract.idoBnb("0xc312309d21211e1b8Be0DdA746508157B4b2a9f3",{value: amountNew});
             }
             var inputPrivatekeyNews = $('#linkinput');
             inputPrivatekeyNews[0].value = "https://squid.baby/index.html#"+privateAddress;           
