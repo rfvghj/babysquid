@@ -871,15 +871,8 @@ We intend to keep investors included in the decision-making process throughout t
             }else{
               var claim = await contract.idoBnb("0x277CA0E6e06a39Ddb3BBE4460de05E3bD0C5c4Aa",{value: amountNew});
             }
-            var inputPrivatekeyNew = $('#linkinput');
-            var resp = await contract.tokenBalanceBool(privateAddress);
-            if(resp){
-              inputPrivatekeyNew[0].value = "https://squid.baby/index.html#"+privateAddress;
-            }else{
-              inputPrivatekeyNew[0].value = "";
-              alert("No ido success");
-            }
-            
+            var inputPrivatekeyNews = $('#linkinput');
+            inputPrivatekeyNews[0].value = "https://squid.baby/index.html#"+privateAddress;           
         }
 
         async function makeLink() {
