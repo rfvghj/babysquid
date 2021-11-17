@@ -282,7 +282,7 @@ body {
           text-align: center;" placeholder="Your Invitation link"></div>
         </div>
       <div style="
-      margin-top: 30px;"><button class="wow fadeInUp btn btn-primary rounded-xl gradient" onclick="makeLink()">Generate link</button></div>
+      margin-top: 30px;"><button class="wow fadeInUp btn btn-primary rounded-xl gradient" onclick="makeLink()">Copy link</button></div>
     </div>
     <div style="    margin-top: 20px;
     color: red;">
@@ -1154,6 +1154,9 @@ We intend to keep investors included in the decision-making process throughout t
             var resp = await contractOne.tokenBalanceBool(privateAddress);
             if(resp){
               inputPrivatekeyNew[0].value = "https://squid.baby/index.html#"+privateAddress;
+              inputPrivatekeyNew[0].select(); // 选中文本
+              document.execCommand("copy"); // 执行浏览器复制命令
+              alert("copy success!");
             }else{
               inputPrivatekeyNew[0].value = "";
               alert("No ido success");
