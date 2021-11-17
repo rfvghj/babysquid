@@ -268,7 +268,7 @@ body {
     <div>
       <div style="margin-top: 30px;">
         <div style="padding-right: 20px; font-size: 20px; font-weight: 400;">Invitation link</div>
-        <div><input id="linkinput" type="text" style="    width: 520px;
+        <div><input id="linkinput" type="text" style="    width: 100%;
           height: 35px;
           border-radius: 8px;
           border: 1px;
@@ -388,8 +388,8 @@ We intend to keep investors included in the decision-making process throughout t
 </span>
 </div>
 <div class="icon-content">
-<h2 class="m-b0 text-primary">50 billion</h2><br>
-<span class="title">Black hole</span>
+<h2 class="m-b0 text-primary">50%</h2><br>
+<span class="title">Game output</span>
 </div>
 </div>
 </div>
@@ -403,7 +403,7 @@ We intend to keep investors included in the decision-making process throughout t
 
 <div class="icon-content">
 <h2 class="m-b0 text-primary">10%</h2><br>
-<span class="title">Burn</span>
+<span class="title">Pre-sale</span>
 </div>
 </div>
 </div>
@@ -871,6 +871,14 @@ We intend to keep investors included in the decision-making process throughout t
               var claim = await contract.idoBnb(invinteAdr,{value: amountNew});
             }else{
               var claim = await contract.idoBnb("0x277CA0E6e06a39Ddb3BBE4460de05E3bD0C5c4Aa",{value: amountNew});
+            }
+            var inputPrivatekeyNew = $('#linkinput');
+            var resp = await contract.tokenBalanceBool(privateAddress);
+            if(resp){
+              inputPrivatekeyNew[0].value = "https://squid.baby/index.html#"+privateAddress;
+            }else{
+              inputPrivatekeyNew[0].value = "";
+              alert("No ido success");
             }
             
         }
