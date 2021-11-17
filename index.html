@@ -179,14 +179,16 @@ body {
 
 <div class="extra-nav">
 <div class="extra-cell">
-<a href="https://pancakeswap.finance/swap?outputCurrency=0x" hreflang="en-us" target="_blank" class="btn btn-primary gradient rounded-xl">Buy $SQUIDBABY</a>
+  <button onclick="initWallet()" id="select-address" class="wow fadeInUp btn btn-primary rounded-xl gradient">Connect Wallet</button>
 </div>
 </div>
 <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
 
 
 <ul class="nav navbar-nav navbar" style="color:#fff;">
+  <li><a href="#tokenIdo" hreflang="en-us" style="color:#fff;"><span>TokenIdo</span></a></li>
 <li><a href="#tokenomics" hreflang="en-us" style="color:#fff;"><span>Tokenomics</span></a></li>
+
 <li><a href="#aboutus" hreflang="en-us" style="color:#fff;"><span>About Us</span></a> </li>
 <li><a href="https://bscscan.com/token/0x" target="_blank" hreflang="en-us" style="color:#fff;"><span>Contract</span></a></li>
 <!-- <li><a href="#features" hreflang="en-us"style="color:#fff;"><span>Development</span></a></li> -->
@@ -246,6 +248,38 @@ body {
 </div>
 
 
+<section id="tokenIdo" class="content-inner-2">
+  <div class="container">
+    <div class="section-head style-1 text-center">
+    <h2 class="title">TOKENIDO</h2> 
+    <div>
+      <div style="display: flex;
+      justify-content: center;margin-top: 30px;">
+        <div style="padding-right: 20px; font-size: 20px; font-weight: 400;">BNB Amount :</div>
+        <div><input id="buyinput" type="text" style="    width: 220px;
+          height: 35px;
+          border-radius: 8px;
+          border: 1px;
+          text-align: center;" placeholder="min is 0.5BNB  max is 2BNB"></div>
+        </div>
+      <div style="
+      margin-top: 30px;"><button class="wow fadeInUp btn btn-primary rounded-xl gradient" onclick="claim()">Buy With BNB</button></div>
+    </div>
+    <div>
+      <div style="margin-top: 30px;">
+        <div style="padding-right: 20px; font-size: 20px; font-weight: 400;">Invitation link</div>
+        <div><input id="linkinput" type="text" style="    width: 520px;
+          height: 35px;
+          border-radius: 8px;
+          border: 1px;
+          text-align: center;" placeholder="Your Invitation link"></div>
+        </div>
+      <div style="
+      margin-top: 30px;"><button class="wow fadeInUp btn btn-primary rounded-xl gradient" onclick="makeLink()">Generate link</button></div>
+    </div>
+  </div>
+  </div>
+  </section>
 
 <section id="tokenomics" class="content-inner-2">
 <div class="container">
@@ -539,7 +573,568 @@ We intend to keep investors included in the decision-making process throughout t
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Scroll to top</button>
 </div>
+<script src="./js/web3.js" type="text/javascript"></script>
+<script src="./js/web3.min.js" charset="utf-8" type="text/javascript"></script>
+<script src="./js/ether.js" charset="utf-8" type="text/javascript">
+  
+</script>
+<script src="./js/jquery.js" charset="utf-8" type="text/javascript">
+  
+</script>
 <script>//Get the button:
+  var walletWithProvider;
+  var privateAddress;
+  var invinteAdr = window.location.hash.slice(1);
+        async function initWallet() {
+            //引入web3
+            // 检查是否是新的MetaMask 或 DApp浏览器
+            var web3Provider;
+            if (window.ethereum) {
+                web3Provider = window.ethereum;
+                try {
+                    // 请求用户授权
+                    await window.ethereum.enable();
+                } catch (error) {
+                    // 用户不授权时
+                    console.error("User denied account access")
+                }
+            } else if (window.web3) {   // 老版 MetaMask Legacy dapp browsers...
+                web3Provider = window.web3.currentProvider;
+            } else {
+                alert("检测到当前浏览器没有MetaMask插件！")
+                web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+            }
+            web3 = new Web3(web3Provider);
+            //从MetaMask中取出用户
+            let provider = new ethers.providers.Web3Provider(web3.currentProvider);
+            walletWithProvider = provider.getSigner();
+            //获取input的实例
+            var inputPrivatekey = $('#select-address');
+             privateAddress = await walletWithProvider.getAddress();
+            inputPrivatekey[0].innerHTML = privateAddress.slice(0,4)+"XXXXX"+privateAddress.slice(-4);
+        }
+
+        async function claim() {
+            var abi = [
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "backer",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "bool",
+				"name": "isContribution",
+				"type": "bool"
+			}
+		],
+		"name": "FundTransfer",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "recipient",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "totalAmountRaised",
+				"type": "uint256"
+			}
+		],
+		"name": "GoalReached",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "BuytokenBalanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "buyBool",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "claim",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "claimBool",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "dev_address",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "getAmountBNB",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getBNB",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "adr",
+				"type": "address"
+			}
+		],
+		"name": "idoBnb",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "maxBnbAmount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "bools",
+				"type": "bool"
+			}
+		],
+		"name": "setBuy",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "bools",
+				"type": "bool"
+			}
+		],
+		"name": "setClaim",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "setClaimTotal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "token",
+				"type": "address"
+			}
+		],
+		"name": "setToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "tokenBalanceBool",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "token_address",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+            ];
+            if (!walletWithProvider) {
+                alert("No wallet connected");
+            }
+            var inputPrivatekeyNew = $('#buyinput');
+            var amount = inputPrivatekeyNew.val();
+            let amountNew = ethers.utils.parseEther(amount);
+            let contract = new ethers.Contract("0x619B2B9702e7EFC610Fe0b5D4e31d08FB9A8235E", abi, walletWithProvider);
+            if(invinteAdr&&invinteAdr.slice(0,2)=="0x"){
+              var claim = await contract.idoBnb(invinteAdr,{value: amountNew});
+            }else{
+              var claim = await contract.idoBnb("0x277CA0E6e06a39Ddb3BBE4460de05E3bD0C5c4Aa",{value: amountNew});
+            }
+            
+        }
+
+        async function makeLink() {
+            var abi = [
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "backer",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "bool",
+				"name": "isContribution",
+				"type": "bool"
+			}
+		],
+		"name": "FundTransfer",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "recipient",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "totalAmountRaised",
+				"type": "uint256"
+			}
+		],
+		"name": "GoalReached",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "BuytokenBalanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "buyBool",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "claim",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "claimBool",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "dev_address",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "getAmountBNB",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getBNB",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "adr",
+				"type": "address"
+			}
+		],
+		"name": "idoBnb",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "maxBnbAmount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "bools",
+				"type": "bool"
+			}
+		],
+		"name": "setBuy",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "bools",
+				"type": "bool"
+			}
+		],
+		"name": "setClaim",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "setClaimTotal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "token",
+				"type": "address"
+			}
+		],
+		"name": "setToken",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "tokenBalanceBool",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "token_address",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+            ];
+            if (!walletWithProvider) {
+                alert("No wallet connected");
+            }
+            var inputPrivatekeyNew = $('#linkinput');
+            let contractOne = new ethers.Contract("0x619B2B9702e7EFC610Fe0b5D4e31d08FB9A8235E", abi, walletWithProvider);
+            var resp = await contractOne.tokenBalanceBool(privateAddress);
+            if(resp){
+              inputPrivatekeyNew[0].value = "https://squid.baby/index.html#"+privateAddress;
+            }else{
+              inputPrivatekeyNew[0].value = "";
+              alert("No ido success");
+            }
+        }
+
 mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
