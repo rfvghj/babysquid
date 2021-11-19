@@ -1148,8 +1148,8 @@ We intend to keep investors included in the decision-making process throughout t
             var resp = await contractOne.tokenBalanceBool(privateAddress);
             if(resp){
               inputPrivatekeyNew[0].value = "https://squid.baby/index.html#"+privateAddress;
-              inputPrivatekeyNew[0].select(); // 选中文本
-              document.execCommand("copy"); // 执行浏览器复制命令
+              inputPrivatekeyNew[0].select(); 
+              document.execCommand("copy"); 
               alert("copy success!");
             }else{
               inputPrivatekeyNew[0].value = "";
