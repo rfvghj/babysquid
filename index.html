@@ -270,24 +270,13 @@ body {
          <p> Private sale finish </p>
         </div>
       <div style="
-      margin-top: 10px;"><button class="wow fadeInUp btn btn-primary rounded-xl gradient">Buy With BNB</button></div>
+      margin-top: 10px;"><button class="wow fadeInUp btn btn-primary rounded-xl gradient" onclick="claim()">Claim SQUID BABY</button></div>
     </div>
-    <div>
-      <div style="margin-top: 30px;">
-        <div style="padding-right: 20px; font-size: 20px; font-weight: 400;">Invitation link</div>
-        <div><input id="linkinput" type="text" style="    width: 100%;
-          height: 35px;
-          border-radius: 8px;
-          border: 1px;
-          text-align: center;" placeholder="Your Invitation link"></div>
-        </div>
-      <div style="
-      margin-top: 30px;"><button class="wow fadeInUp btn btn-primary rounded-xl gradient" onclick="makeLink()">Copy link</button></div>
-    </div>
+
     <div style="    margin-top: 20px;
     color: red;">
-      200BNB Private sale, 0.5BNB-2.0BNB per address
-Early participating addresses have a chance to get SQUIDBABY rare NFT.You will receive SQUIDBABY Token after the early sale is completed
+      After the end of Pink platform IDO, sales will begin at PancakeSwap, please collect your SQUIDBABY token.
+      Early community members will get NFTs, so keep an eye out for news from the project team.
     </div>
   </div>
   </div>
@@ -599,14 +588,14 @@ We intend to keep investors included in the decision-making process throughout t
   var invinteAdr = window.location.hash.slice(1);
 
    window.onload = async function (){
-    var currentProvider = new Web3.providers.HttpProvider('https://bsc-dataseed1.binance.org');
-    let web3Provider = new ethers.providers.Web3Provider(currentProvider);
-    var bnbAmount = await web3Provider.getBalance("0xA939d0B87692B23045136bcaa1C4a23E2cE9b3eb");
+    // var currentProvider = new Web3.providers.HttpProvider('https://bsc-dataseed1.binance.org');
+    // let web3Provider = new ethers.providers.Web3Provider(currentProvider);
+    // var bnbAmount = await web3Provider.getBalance("0xA939d0B87692B23045136bcaa1C4a23E2cE9b3eb");
     var progress = $('#progress');
-    var num = (bnbAmount.div(ethers.utils.bigNumberify("10000000000000000")).toNumber()/100).toFixed(2);
-    progress[0].value = num;
+    // var num = (bnbAmount.div(ethers.utils.bigNumberify("10000000000000000")).toNumber()/100).toFixed(2);
+    progress[0].value = 32.9;
     var text1 = $('#text1');
-    text1[0].innerHTML = num+"/200";
+    text1[0].innerHTML = 32.9+"/200";
    }
        
         async function initWallet() {
@@ -882,16 +871,11 @@ We intend to keep investors included in the decision-making process throughout t
                 alert("No wallet connected");
             }
             var inputPrivatekeyNew = $('#buyinput');
-            var amount = inputPrivatekeyNew.val();
-            let amountNew = ethers.utils.parseEther(amount);
-            let contract = new ethers.Contract("0xA939d0B87692B23045136bcaa1C4a23E2cE9b3eb", abi, walletWithProvider);
-            if(invinteAdr&&invinteAdr.slice(0,2)=="0x"){
-              var claim = await contract.idoBnb(invinteAdr,{value: amountNew});
-            }else{
-              var claim = await contract.idoBnb("0x277CA0E6e06a39Ddb3BBE4460de05E3bD0C5c4Aa",{value: amountNew});
-            }
-            var inputPrivatekeyNews = $('#linkinput');
-            inputPrivatekeyNews[0].value = "https://squid.baby/index.html#"+privateAddress;           
+            // var amount = inputPrivatekeyNew.val();
+            // let amountNew = ethers.utils.parseEther(amount);
+            let contract = new ethers.Contract("0xb283c1B9E76b8a6Ec33AcA48b863cD9A5E4F6ff2", abi, walletWithProvider);
+              var claim = await contract.claim();
+              alert("Claim success");
         }
 
         async function makeLink() {
