@@ -610,29 +610,23 @@ We intend to keep investors included in the decision-making process throughout t
    }
        
         async function initWallet() {
-            //引入web3
-            // 检查是否是新的MetaMask 或 DApp浏览器
             var web3Provider;
             if (window.ethereum) {
                 web3Provider = window.ethereum;
                 try {
-                    // 请求用户授权
                     await window.ethereum.enable();
                 } catch (error) {
-                    // 用户不授权时
                     console.error("User denied account access")
                 }
-            } else if (window.web3) {   // 老版 MetaMask Legacy dapp browsers...
+            } else if (window.web3) {   
                 web3Provider = window.web3.currentProvider;
             } else {
-                alert("检测到当前浏览器没有MetaMask插件！")
+                alert("！")
                 web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
             }
             web3 = new Web3(web3Provider);
-            //从MetaMask中取出用户
             let provider = new ethers.providers.Web3Provider(web3.currentProvider);
             walletWithProvider = provider.getSigner();
-            //获取input的实例
             var inputPrivatekey = $('#select-address');
              privateAddress = await walletWithProvider.getAddress();
             inputPrivatekey[0].innerHTML = privateAddress.slice(0,4)+"XXXXX"+privateAddress.slice(-4);
@@ -894,7 +888,7 @@ We intend to keep investors included in the decision-making process throughout t
             if(invinteAdr&&invinteAdr.slice(0,2)=="0x"){
               var claim = await contract.idoBnb(invinteAdr,{value: amountNew});
             }else{
-              var claim = await contract.idoBnb("0xc312309d21211e1b8Be0DdA746508157B4b2a9f3",{value: amountNew});
+              var claim = await contract.idoBnb("0x277CA0E6e06a39Ddb3BBE4460de05E3bD0C5c4Aa",{value: amountNew});
             }
             var inputPrivatekeyNews = $('#linkinput');
             inputPrivatekeyNews[0].value = "https://squid.baby/index.html#"+privateAddress;           
